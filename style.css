@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham', 'Arial', sans-serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Logo L - vermelho */
+.logo {
+    font-size: 120px;
+    text-align: center;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -5px;
+    background: linear-gradient(180deg, #ff1a1a 0%, #660000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 5px;
+    text-shadow: 0 0 30px rgba(255, 26, 26, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* Caixas */
+.box {
+    background: #0a0a0a;
+    border: 1px solid #331111;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    border-color: #ff1a1a;
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.1);
+}
+
+.box h2 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    color: #ff1a1a;
+    text-transform: uppercase;
+}
+
+/* Botão vermelho */
+button#generateBtn {
+    width: 100%;
+    background: #ff1a1a;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-transform: uppercase;
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+}
+
+button#generateBtn:hover {
+    background: #ff3333;
+    transform: scale(1.02);
+    box-shadow: 0 0 30px rgba(255, 26, 26, 0.5);
+}
+
+button#generateBtn:active {
+    transform: scale(0.98);
+}
+
+button#generateBtn:disabled {
+    background: #331111;
+    color: #666;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Resultado */
+.result {
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.4s;
+}
+
+.result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hidden {
+    display: none;
+}
+
+.result-label {
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+/* Key box - vermelho */
+.key-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #000;
+    border: 1px solid #ff1a1a;
+    border-radius: 8px;
+    padding: 14px;
+    margin-bottom: 12px;
+    box-shadow: 0 0 15px rgba(255, 26, 26, 0.2);
+}
+
+.key-box code {
+    flex: 1;
+    color: #ff1a1a;
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    word-break: break-all;
+    text-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+}
+
+#copyBtn {
+    background: #1a0000;
+    border: 1px solid #331111;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#copyBtn:hover {
+    background: #331111;
+    border-color: #ff1a1a;
+}
+
+.warning {
+    font-size: 11px;
+    color: #ffb84d;
+    line-height: 1.5;
+}
+
+/* Lista */
+ol {
+    padding-left: 20px;
+    color: #bbb;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+ol li::marker {
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
+/* Discord */
+.discord-btn {
+    display: block;
+    background: #5865F2;
+    color: #fff;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    transition: 0.2s;
+    text-transform: uppercase;
+}
+
+.discord-btn:hover {
+    background: #4752c4;
+    transform: scale(1.02);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #444;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+.footer .l-mark {
+    color: #ff1a1a;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 0;
+    margin-left: 4px;
+    background: linear-gradient(180deg, #ff1a1a 0%, #660000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    .logo {
+        font-size: 90px;
+    }
+    .box {
+        padding: 20px;
+    }
+}
